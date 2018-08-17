@@ -12,7 +12,7 @@
 		A5DA263F21265E74005443C0 /* StringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA263D21265E74005443C0 /* StringOperators.swift */; };
 		A5DA264021265E74005443C0 /* CompositionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA263E21265E74005443C0 /* CompositionOperators.swift */; };
 		A5DA264321265E81005443C0 /* CompositionOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA264121265E80005443C0 /* CompositionOperatorTests.swift */; };
-		A5DA264421265E81005443C0 /* StringOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA264221265E81005443C0 /* StringOperatorsTests.swift */; };
+		A5DA264921266BBE005443C0 /* StringOperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA264821266BBE005443C0 /* StringOperatorsTests.swift */; };
 		B864A44F9A5BF4C97FE44444 /* Pods_FunctionalOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D8C45E16D50C90EC02F6C5 /* Pods_FunctionalOperators.framework */; };
 		F264ECED8A50F985846C3CA4 /* Pods_FunctionalOperatorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54CBDD9C25855CEA184169E9 /* Pods_FunctionalOperatorsTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,9 @@
 		A5DA263D21265E74005443C0 /* StringOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringOperators.swift; sourceTree = "<group>"; };
 		A5DA263E21265E74005443C0 /* CompositionOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionOperators.swift; sourceTree = "<group>"; };
 		A5DA264121265E80005443C0 /* CompositionOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionOperatorTests.swift; sourceTree = "<group>"; };
-		A5DA264221265E81005443C0 /* StringOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringOperatorsTests.swift; path = "../../functional forms/FunctionalOperatorsTests/StringOperatorsTests.swift"; sourceTree = "<group>"; };
-		A5DA264521265F66005443C0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A5DA264521265F66005443C0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5DA264821266BBE005443C0 /* StringOperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringOperatorsTests.swift; sourceTree = "<group>"; };
+		A5DA264A21266CE3005443C0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AB78B3EB60043C631A0CBBEE /* Pods-FunctionalOperatorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalOperatorsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalOperatorsTests/Pods-FunctionalOperatorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F6322A3AB3982B5947CA072A /* Pods-FunctionalOperators.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionalOperators.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunctionalOperators/Pods-FunctionalOperators.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +91,7 @@
 		A5DA261121265E33005443C0 = {
 			isa = PBXGroup;
 			children = (
+				A5DA264A21266CE3005443C0 /* .gitignore */,
 				A5DA264521265F66005443C0 /* Podfile */,
 				A5DA261D21265E33005443C0 /* FunctionalOperators */,
 				A5DA262821265E33005443C0 /* FunctionalOperatorsTests */,
@@ -122,8 +124,8 @@
 		A5DA262821265E33005443C0 /* FunctionalOperatorsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5DA264821266BBE005443C0 /* StringOperatorsTests.swift */,
 				A5DA264121265E80005443C0 /* CompositionOperatorTests.swift */,
-				A5DA264221265E81005443C0 /* StringOperatorsTests.swift */,
 				A5DA262B21265E33005443C0 /* Info.plist */,
 			);
 			path = FunctionalOperatorsTests;
@@ -242,15 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FunctionalOperators-checkManifestLockResult.txt",
 			);
@@ -264,16 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FunctionalOperatorsTests/Pods-FunctionalOperatorsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -288,15 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FunctionalOperatorsTests-checkManifestLockResult.txt",
 			);
@@ -321,8 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DA264921266BBE005443C0 /* StringOperatorsTests.swift in Sources */,
 				A5DA264321265E81005443C0 /* CompositionOperatorTests.swift in Sources */,
-				A5DA264421265E81005443C0 /* StringOperatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
